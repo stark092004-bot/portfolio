@@ -1,0 +1,231 @@
+.experience {
+    position: relative;
+    padding: var(--section-padding) 0;
+    background: var(--bg-primary);
+}
+
+.experience-header {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+/* Timeline */
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.timeline-line {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(to bottom,
+            var(--accent-primary) 0%,
+            var(--accent-secondary) 50%,
+            var(--accent-tertiary) 100%);
+    opacity: 0.5;
+}
+
+/* Timeline Item */
+.timeline-item {
+    position: relative;
+    width: 50%;
+    padding: 20px 0;
+}
+
+.timeline-item.left {
+    left: 0;
+    padding-right: 50px;
+    padding-left: 20px;
+    text-align: left;
+}
+
+.timeline-item.right {
+    left: 50%;
+    padding-left: 50px;
+    padding-right: 20px;
+    text-align: left;
+}
+
+/* Timeline Dot */
+.timeline-dot {
+    position: absolute;
+    top: 30px;
+    width: 40px;
+    height: 40px;
+    background: var(--bg-secondary);
+    border: 2px solid var(--accent-primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent-primary);
+    z-index: 10;
+    box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
+}
+
+.timeline-item.left .timeline-dot {
+    right: -20px;
+}
+
+.timeline-item.right .timeline-dot {
+    left: -20px;
+}
+
+/* Timeline Card */
+.timeline-card {
+    padding: 28px;
+    cursor: pointer;
+}
+
+.exp-period {
+    display: inline-block;
+    font-family: var(--font-accent);
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--accent-primary);
+    margin-bottom: 12px;
+}
+
+.exp-header {
+    margin-bottom: 20px;
+}
+
+.exp-title {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 6px;
+}
+
+.exp-role {
+    display: block;
+    font-family: var(--font-accent);
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--accent-secondary);
+    margin-bottom: 4px;
+}
+
+.exp-company {
+    display: block;
+    font-family: var(--font-accent);
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    opacity: 0.9;
+}
+
+.exp-tasks {
+    margin-bottom: 20px;
+}
+
+.exp-section-title {
+    font-family: var(--font-accent);
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--accent-primary);
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.task-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.task-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 8px;
+}
+
+.task-bullet {
+    color: var(--accent-primary);
+    font-size: 1.2rem;
+    line-height: 1.4;
+    flex-shrink: 0;
+}
+
+.timeline-item.left .task-item {
+    flex-direction: row;
+    text-align: left;
+}
+
+.exp-tech {
+    margin-top: 16px;
+}
+
+.tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.timeline-item.left .tech-tags {
+    justify-content: flex-start;
+}
+
+.exp-tech .tech-tag {
+    padding: 6px 14px;
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    transition: all var(--transition-fast);
+}
+
+.exp-tech .tech-tag:hover {
+    border-color: var(--accent-primary);
+    color: var(--accent-primary);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .timeline-line {
+        left: 20px;
+    }
+
+    .timeline-item {
+        width: 100%;
+        padding-left: 70px !important;
+        padding-right: 20px !important;
+        text-align: left !important;
+    }
+
+    .timeline-item.left,
+    .timeline-item.right {
+        left: 0;
+    }
+
+    .timeline-dot {
+        left: 0 !important;
+        right: auto !important;
+    }
+
+    .timeline-item.left .exp-tech {
+        justify-content: flex-start;
+    }
+
+    .timeline-item.left .task-item {
+        flex-direction: row;
+        text-align: left;
+    }
+
+    .timeline-item.left .tech-tags {
+        justify-content: flex-start;
+    }
+}

@@ -1,0 +1,22 @@
+#root {
+    width: 100%;
+    min-height: 100vh;
+}
+
+/* Additional App-specific styles */
+.app-wrapper {
+    position: relative;
+    z-index: 1;
+}
+
+/* Section styles */
+section {
+    position: relative;
+    padding: var(--section-padding) 0;
+}
+
+/* Ensure content is above particle background */
+main {
+    position: relative;
+    z-index: 10;
+}

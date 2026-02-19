@@ -1,0 +1,2 @@
+PRE_BUILD_COMMAND="echo 'Starting Azure build...'"
+POST_BUILD_COMMAND="echo 'Build completed successfully!'"

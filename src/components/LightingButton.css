@@ -1,0 +1,142 @@
+.lighting-button {
+    position: relative;
+    overflow: hidden;
+    border-radius: 9999px;
+    background-color: var(--bg-secondary);
+    /* Adapts to theme */
+    padding: 12px 24px;
+    font-family: var(--font-body);
+    font-weight: 500;
+    font-size: 1rem;
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+    cursor: pointer;
+    width: fit-content;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s, border-color 0.3s;
+    box-shadow: var(--shadow-sm);
+}
+
+/* Spotlight overlay for the surface shine */
+.spotlight-overlay {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+    mix-blend-mode: overlay;
+}
+
+/* Border glow container */
+.button-border {
+    position: absolute;
+    inset: -1px;
+    /* Extend slightly outside */
+    border-radius: 9999px;
+    padding: 1px;
+    /* Border width */
+    background: transparent;
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.button-content {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    pointer-events: none;
+}
+
+/* Silver/White animated border - shared styles for both variants */
+.lighting-button::before {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    border-radius: 9999px;
+    padding: 2px;
+    background: linear-gradient(90deg,
+            #ffffff,
+            #c0c0c0,
+            #ffffff,
+            #e8e8e8,
+            #c0c0c0,
+            #ffffff);
+    background-size: 300% 100%;
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 0;
+}
+
+.lighting-button:hover::before {
+    opacity: 1;
+    animation: silverBorderFlow 2s linear infinite;
+}
+
+.lighting-button:hover {
+    border-color: transparent;
+    box-shadow:
+        0 0 15px rgba(255, 255, 255, 0.3),
+        0 0 30px rgba(192, 192, 192, 0.2);
+}
+
+@keyframes silverBorderFlow {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    100% {
+        background-position: 300% 50%;
+    }
+}
+
+/* Primary Variant */
+.lighting-button.primary {
+    background-color: var(--bg-tertiary);
+}
+
+/* Secondary Variant */
+.lighting-button.secondary {
+    background-color: transparent;
+    border-color: var(--border-color);
+}
+
+/* Dark mode specifics if needed to force black button */
+[data-theme="dark"] .lighting-button {
+    background-color: #000;
+    /* Deep black for true lighting effect */
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="light"] .lighting-button {
+    background-color: #fff;
+    border-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Ensure silver border shows properly in both themes */
+[data-theme="dark"] .lighting-button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+[data-theme="light"] .lighting-button:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+}
