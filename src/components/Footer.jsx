@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-scroll';
-import { FaGithub, FaLinkedin, FaTwitter, FaHeart, FaArrowUp } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaTwitter, FaTelegramPlane, FaHeart, FaArrowUp } from 'react-icons/fa';
 import { personalInfo, navLinks } from '../data/portfolioData';
 import './Footer.css';
 
@@ -13,6 +13,7 @@ const Footer = ({ onHover, onLeave }) => {
     { icon: FaGithub, href: personalInfo.social.github, label: 'GitHub' },
     { icon: FaLinkedin, href: personalInfo.social.linkedin, label: 'LinkedIn' },
     { icon: FaTwitter, href: personalInfo.social.twitter, label: 'Twitter' },
+    { icon: FaTelegramPlane, href: personalInfo.social.telegram, label: 'Telegram' },
   ];
 
   return (
@@ -44,7 +45,7 @@ const Footer = ({ onHover, onLeave }) => {
               {personalInfo.role}
             </p>
             <p className="footer-description">
-              Building digital experiences with modern web technologies.
+              Building full stack, cloud, and AI-powered products with modern web technologies.
             </p>
           </motion.div>
 
@@ -93,7 +94,16 @@ const Footer = ({ onHover, onLeave }) => {
             >
               {personalInfo.email}
             </a>
-            <p className="footer-location">{personalInfo.location}</p>
+            <a
+              href={personalInfo.social.telegram}
+              className="footer-location"
+              target="_blank"
+              rel="noopener noreferrer"
+              onMouseEnter={onHover}
+              onMouseLeave={onLeave}
+            >
+              {personalInfo.telegram}
+            </a>
             
             {/* Social Links */}
             <div className="footer-social">

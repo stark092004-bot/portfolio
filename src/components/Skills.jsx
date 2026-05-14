@@ -1,9 +1,21 @@
 import { useState, useRef, useEffect } from 'react';
 import { motion, useInView } from 'framer-motion';
-import { 
-  FaReact, FaHtml5, FaCss3Alt, FaGitAlt, FaFigma, FaBootstrap, FaSass,
-  FaCloud, FaJs, FaCode, FaLaptopCode, FaPalette, FaTable, FaChartBar
+import {
+  FaReact, FaFigma, FaCloud, FaJs, FaCode, FaPalette, FaTable, FaChartBar, FaServer, FaBrain,
 } from 'react-icons/fa';
+import {
+  SiNodedotjs,
+  SiExpress,
+  SiNestjs,
+  SiGraphql,
+  SiPostgresql,
+  SiRedis,
+  SiOpenai,
+  SiLangchain,
+  SiAnthropic,
+  SiHuggingface,
+  SiMilvus,
+} from 'react-icons/si';
 import { skills } from '../data/portfolioData';
 import './Skills.css';
 
@@ -56,21 +68,25 @@ const iconMap = {
   SiNextdotjs: { icon: FaReact, color: '#ffffff' },
   SiJavascript: { icon: FaJs, color: '#F7DF1E' },
   SiTypescript: { icon: FaCode, color: '#3178C6' },
-  FaHtml5: { icon: FaHtml5, color: '#E34F26' },
-  FaCss3Alt: { icon: FaCss3Alt, color: '#1572B6' },
-  SiMicrosoftazure: { icon: FaCloud, color: '#0089D6' },
   SiAzuredevops: { icon: FaCloud, color: '#0078D7' },
-  FaGitAlt: { icon: FaGitAlt, color: '#F05032' },
   FaFigma: { icon: FaFigma, color: '#F24E1E' },
-  SiVisualstudiocode: { icon: FaLaptopCode, color: '#007ACC' },
   SiTailwindcss: { icon: FaPalette, color: '#06B6D4' },
-  FaBootstrap: { icon: FaBootstrap, color: '#7952B3' },
-  SiMui: { icon: FaPalette, color: '#007FFF' },
-  FaSass: { icon: FaSass, color: '#CC6699' },
   SiAg: { icon: FaTable, color: '#FF6900' },
   SiApacheecharts: { icon: FaChartBar, color: '#AA344D' },
   SiJest: { icon: FaCode, color: '#C21325' },
-  SiPostman: { icon: FaCode, color: '#FF6C37' },
+  SiNodedotjs: { icon: SiNodedotjs, color: '#339933' },
+  SiExpress: { icon: SiExpress, color: '#888888' },
+  SiNestjs: { icon: SiNestjs, color: '#E0234E' },
+  SiGraphql: { icon: SiGraphql, color: '#E10098' },
+  SiPostgresql: { icon: SiPostgresql, color: '#4169E1' },
+  SiRedis: { icon: SiRedis, color: '#DC382D' },
+  FaServer: { icon: FaServer, color: '#6B7280' },
+  SiOpenai: { icon: SiOpenai, color: '#10A37F' },
+  SiLangchain: { icon: SiLangchain, color: '#36C49B' },
+  SiAnthropic: { icon: SiAnthropic, color: '#D4A574' },
+  SiHuggingface: { icon: SiHuggingface, color: '#FFD21E' },
+  SiMilvus: { icon: SiMilvus, color: '#00A1EA' },
+  FaBrain: { icon: FaBrain, color: '#A855F7' },
 };
 
 
@@ -82,23 +98,23 @@ const Skills = ({ onHover, onLeave }) => {
 
   const categories = [
     { id: 'all', name: 'All Skills' },
-    { id: 'frameworks', name: 'Frameworks / Libraries' },
-    { id: 'programming', name: 'Programming' },
+    { id: 'frameworks', name: 'Frontend' },
+    { id: 'backend', name: 'Backend' },
+    { id: 'ai', name: 'AI & GenAI' },
+    { id: 'programming', name: 'Languages' },
     { id: 'cicd', name: 'CI/CD' },
-    { id: 'cloud', name: 'Cloud' },
-    { id: 'uiDesigning', name: 'UI Designing' },
-    { id: 'tools', name: 'Tools' }
+    { id: 'uiDesigning', name: 'UI Design' },
   ];
 
   const getAllSkills = () => {
     if (activeCategory === 'all') {
       return [
         ...skills.frameworks,
+        ...skills.backend,
+        ...skills.ai,
         ...skills.programming,
         ...skills.cicd,
-        ...skills.cloud,
         ...skills.uiDesigning,
-        ...skills.tools
       ];
     }
     return skills[activeCategory] || [];
@@ -138,7 +154,7 @@ const Skills = ({ onHover, onLeave }) => {
         >
           <h2 className="section-title">Skills & Technologies</h2>
           <p className="section-subtitle">
-            Technologies I've been working with to build amazing digital experiences
+            Frontend, backend, cloud, and modern GenAI — LLMs, RAG, agents, and the tools that ship them safely.
           </p>
         </motion.div>
 
@@ -186,20 +202,20 @@ const Skills = ({ onHover, onLeave }) => {
             return (
               <motion.div
                 key={`${skill.name}-${index}`}
-                className="skill-card glass-card"
+                className="skill-card glass-card skill-card--compact"
                 variants={skillVariants}
                 whileHover={{ 
-                  y: -8, 
+                  y: -4, 
                   scale: 1.02,
-                  rotateY: 5,
-                  rotateX: -5
+                  rotateY: 4,
+                  rotateX: -3
                 }}
                 onMouseEnter={onHover}
                 onMouseLeave={onLeave}
                 style={{ transformStyle: 'preserve-3d' }}
               >
                 <div className="skill-icon" style={{ color: iconColor }}>
-                  {IconComponent && <IconComponent size={40} />}
+                  {IconComponent && <IconComponent size={28} />}
                 </div>
                 <h3 className="skill-name">{skill.name}</h3>
                 <div className="skill-progress">

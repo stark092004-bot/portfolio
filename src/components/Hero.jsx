@@ -1,10 +1,7 @@
 import { motion } from 'framer-motion';
-import { Link } from 'react-scroll';
 import { TypeAnimation } from 'react-type-animation';
-import { FaGithub, FaLinkedin, FaTwitter, FaArrowDown, FaDownload } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
 import { personalInfo } from '../data/portfolioData';
-import LightingButton from './LightingButton';
-import resumeFile from '../assets/resume/Yash_Jain_Resume.pdf';
 import './Hero.css';
 
 const Hero = ({ onHover, onLeave }) => {
@@ -70,9 +67,13 @@ const Hero = ({ onHover, onLeave }) => {
               sequence={[
                 'Full Stack Developer',
                 3000,
-                'UI Designer',
+                'GenAI Engineer',
                 3000,
-                'Frontend Developer',
+                'LLM Integrations',
+                3000,
+                'API Developer',
+                3000,
+                'UI Designer',
                 3000,
                 'Team Lead',
                 3000,
@@ -95,50 +96,31 @@ const Hero = ({ onHover, onLeave }) => {
           </motion.p>
 
           <motion.p className="hero-description" variants={itemVariants}>
-            <span className="highlight">{personalInfo.experience} years</span> of experience as a Frontend Software Engineer 
-            specializing in <span className="highlight">React</span>, 
-            <span className="highlight"> TypeScript</span>, and 
-            <span className="highlight"> modern JavaScript</span>, 
-            building scalable enterprise portals, AI-driven platforms, and secure web applications.
+            <span className="highlight">{personalInfo.experience} years</span> of experience as a{' '}
+            <span className="highlight">Full Stack & AI</span> engineer — shipping{' '}
+            <span className="highlight">React</span>, <span className="highlight">TypeScript</span>, and{' '}
+            <span className="highlight">Node</span>-backed products with LLM features, retrieval-augmented generation, and secure enterprise integrations.
           </motion.p>
 
-          <motion.div className="hero-cta" variants={itemVariants}>
-            <Link
-              to="projects"
-              smooth={true}
-              duration={500}
-              offset={-80}
-              spy={true}
-              hashSpy={true}
-              className="hero-cta-link"
-            >
-              <LightingButton
-                as="div"
-                onMouseEnter={onHover}
-                onMouseLeave={onLeave}
-              >
-                View My Work
-                <FaArrowDown className="btn-icon" />
-              </LightingButton>
-            </Link>
-            
-            <a 
-              href={resumeFile}
-              download="Yash_Jain_Resume.pdf"
-              className="hero-cta-link"
-            >
-              <LightingButton
-                as="div"
-                variant="secondary"
-                onMouseEnter={onHover}
-                onMouseLeave={onLeave}
-              >
-                Download Resume
-                <FaDownload className="btn-icon" />
-              </LightingButton>
-            </a>
-          </motion.div>
+          <motion.p className="hero-description" variants={itemVariants}>
+            Backend stack:{' '}
+            {personalInfo.heroBackendStack.map((tech, i) => (
+              <span key={tech}>
+                {i > 0 && ' · '}
+                <span className="highlight">{tech}</span>
+              </span>
+            ))}
+          </motion.p>
 
+          <motion.p className="hero-description" variants={itemVariants}>
+            AI stack:{' '}
+            {personalInfo.heroAiStack.map((tech, i) => (
+              <span key={tech}>
+                {i > 0 && ' · '}
+                <span className="highlight">{tech}</span>
+              </span>
+            ))}
+          </motion.p>
           {/* Social Links */}
           <div className="hero-social">
             {[

@@ -2,6 +2,7 @@
 .all-projects-page {
     min-height: 100vh;
     background: var(--bg-primary);
+    overflow-y: auto;
 }
 
 .all-projects-content {

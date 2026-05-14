@@ -1,4 +1,4 @@
-# Yash Jain — Portfolio v3
+# Guy Stark — Portfolio v3
 
 A modern, responsive full-stack developer portfolio built with **React + Vite**, served by a production-hardened **Express** server, and deployed to **Azure App Service**.
 
@@ -46,7 +46,7 @@ npm start       # serves dist/ on port 8080
 ```bash
 npm run build
 zip -r deploy.zip dist/ server.js package.json package-lock.json web.config
-az webapp deploy --resource-group Yash-RG --name yash-jain --src-path deploy.zip --type zip
+az webapp deploy --resource-group Guy-Stark-RG --name guy-stark --src-path deploy.zip --type zip
 ```
 
-Live: **https://yash-jain.azurewebsites.net**
+Live: **https://guy-stark.azurewebsites.net** (update with your App Service URL)

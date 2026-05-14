@@ -94,9 +94,16 @@
 }
 
 .footer-location {
+    display: block;
     color: var(--text-secondary);
     font-size: 0.9rem;
     margin-bottom: 20px;
+    text-decoration: none;
+    transition: all var(--transition-fast);
+}
+
+.footer-location:hover {
+    color: var(--accent-primary);
 }
 
 .footer-social {

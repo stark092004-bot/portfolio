@@ -1,35 +1,42 @@
-// Portfolio Data for Yash Jain - Updated from Resume
+// Portfolio Data for Guy Stark - Updated from Resume
 export const personalInfo = {
-  name: "Yash Jain",
-  role: "Full Stack Developer",
-  tagline: "Crafting Beautiful & Performant Web Experiences",
+  name: "Guy Stark",
+  role: "Full Stack & AI Developer",
+  tagline: "Building intelligent web products — full stack, cloud-native, and AI-ready.",
   experience: "5+",
+  heroBackendStack: [
+    "Node.js",
+    "TypeScript",
+    "REST & GraphQL",
+    "SQL & ORMs",
+    "Redis",
+    "Logging & health checks",
+    "OAuth 2.0 / JWT",
+  ],
+  heroAiStack: [
+    "OpenAI & Azure OpenAI",
+    "LangChain",
+    "RAG",
+    "Agents & tools",
+    "Vector search",
+    "Prompting & evals",
+  ],
   summary: [
-    "5+ years of experience as a Full Stack Engineer specializing in React, TypeScript, and modern JavaScript, building scalable enterprise portals, AI-driven platforms, and secure web applications.",
+    "5+ years of experience as a Full Stack & AI Engineer specializing in React, TypeScript, and modern JavaScript, shipping enterprise portals, GenAI features, and secure web platforms.",
+    "Strong backend delivery with Node.js and TypeScript services (REST and GraphQL), ORM-driven SQL, Redis, structured logging and health checks, and OAuth 2.0 / JWT on cloud platforms.",
+    "Hands-on with modern GenAI: OpenAI and Azure OpenAI APIs, LangChain-style orchestration, RAG with vector stores, agent tool-calling, guardrails, and evaluation workflows alongside React and Node services.",
     "Strong Full-Stack Architecture & UI/UX Expertise with Business-Driven Technical Contributor.",
     "Actively involved in pre-sales, client engagement, and delivering impactful POCs. Strong problem-solving, teamwork and tech adaptability.",
     "Experience setting up CI/CD pipelines using Azure DevOps and deploying cloud-hosted frontend applications on Microsoft Azure.",
     "Strong understanding of software design principles, component abstraction patterns, and scalable frontend architecture.",
-    "Worked with global clients across UAE, Saudi Arabia, Australia, USA, Japan & India in diverse domains including Energy, Fintech, E-commerce, and AI."
   ],
-  email: "yash.jain.consults@gmail.com",
-  location: "India",
-  workAuthorization: {
-    status: "Valid H-1B Visa",
-    details: [
-      { label: "Citizenship", value: "Indian Citizen" },
-      { label: "Visa Type", value: "H-1B" },
-      { label: "Validity", value: "Sept 23, 2024 – Aug 15, 2027" },
-      { label: "H-1B Transfer", value: "Open to Transfer" },
-      { label: "Work Preference", value: "Open to Relocate & Remote" },
-      { label: "Relocation", value: "Open to Global Relocation USA/UK/UAE/EU/AU" },
-    ]
-  },
-  resumeLink: "/assets/resume/Yash_Jain_Resume.pdf",
+  email: "stark092004@gmail.com",
+  telegram: "stark092004",
   social: {
-    github: "https://github.com/yashjain",
-    linkedin: "https://www.linkedin.com/in/yash-jain-097192175",
-    twitter: "https://twitter.com/yashjain"
+    github: "https://github.com/stark092004-bot",
+    linkedin: "https://www.linkedin.com/in/guystark",
+    twitter: "https://twitter.com/guystark",
+    telegram: "https://t.me/stark092004"
   }
 };
 
@@ -38,101 +45,39 @@ export const skills = {
     { name: "React", icon: "FaReact", level: 95 },
     { name: "Jest", icon: "SiJest", level: 85 },
     { name: "Redux", icon: "SiRedux", level: 90 },
-    { name: "Material UI", icon: "SiMui", level: 90 },
-    { name: "Bootstrap", icon: "FaBootstrap", level: 92 },
     { name: "Tailwind CSS", icon: "SiTailwindcss", level: 90 },
     { name: "AG Grid", icon: "SiAg", level: 85 },
     { name: "E-Charts", icon: "SiApacheecharts", level: 82 }
+  ],
+  backend: [
+    { name: "Node.js", icon: "SiNodedotjs", level: 90 },
+    { name: "Express", icon: "SiExpress", level: 88 },
+    { name: "NestJS", icon: "SiNestjs", level: 86 },
+    { name: "REST APIs", icon: "FaServer", level: 90 },
+    { name: "GraphQL", icon: "SiGraphql", level: 82 },
+    { name: "PostgreSQL", icon: "SiPostgresql", level: 85 },
+    { name: "Redis", icon: "SiRedis", level: 80 }
+  ],
+  ai: [
+    { name: "OpenAI API", icon: "SiOpenai", level: 88 },
+    { name: "Azure OpenAI", icon: "SiOpenai", level: 86 },
+    { name: "LangChain", icon: "SiLangchain", level: 84 },
+    { name: "RAG & vector search", icon: "SiMilvus", level: 80 },
+    { name: "Anthropic Claude", icon: "SiAnthropic", level: 82 },
+    { name: "Hugging Face", icon: "SiHuggingface", level: 78 },
+    { name: "Agents & evals", icon: "FaBrain", level: 85 }
   ],
   programming: [
     { name: "TypeScript", icon: "SiTypescript", level: 92 },
     { name: "JavaScript", icon: "SiJavascript", level: 95 }
   ],
   cicd: [
-    { name: "Azure DevOps", icon: "SiAzuredevops", level: 90 },
-    { name: "Git", icon: "FaGitAlt", level: 95 }
-  ],
-  cloud: [
-    { name: "Azure", icon: "SiMicrosoftazure", level: 88 },
-     { name: "Azure Entra ID", icon: "SiMicrosoftazure", level: 85 }
+    { name: "Azure DevOps", icon: "SiAzuredevops", level: 90 }
   ],
   uiDesigning: [
     { name: "Figma", icon: "FaFigma", level: 85 }
-  ],
-  tools: [
-    { name: "Postman", icon: "SiPostman", level: 88 },
-    { name: "VS Code", icon: "SiVisualstudiocode", level: 95 }
   ]
 };
-
-export const certifications = [
-  {
-    code: "AZ-900",
-    name: "Azure Fundamentals",
-    issuer: "Microsoft",
-    icon: "SiMicrosoftazure",
-    badge: "/assets/certificates/badges/azure-fundamentals.png",
-    certificate: "/assets/certificates/docs/Microsoft Certified- Azure Fundamentals .pdf",
-    description: "Foundational knowledge of cloud services and how those services are provided with Microsoft Azure.",
-    skills: ["Cloud Computing Basics", "Azure Services", "Cloud Concepts", "Azure Pricing"],
-    date: "2023"
-  },
-  {
-    code: "SC-900",
-    name: "Security, Compliance and Identity",
-    issuer: "Microsoft",
-    icon: "SiMicrosoftazure",
-    badge: "/assets/certificates/badges/security-compliance-and-identity-fundamentals.png",
-    certificate: "/assets/certificates/docs/Microsoft Certified- Security, Compliance, and Identity Fundamentals.pdf",
-    description: "Foundational knowledge on security, compliance, and identity concepts and related cloud-based Microsoft solutions.",
-    skills: ["Security Concepts", "Azure AD", "Compliance", "Identity Management"],
-    date: "2023"
-  },
-  {
-    code: "AZ-104",
-    name: "Azure Administrator Associate",
-    issuer: "Microsoft",
-    icon: "SiMicrosoftazure",
-    badge: "/assets/certificates/badges/azure-administrator-associate.png",
-    certificate: "/assets/certificates/docs/Microsoft Certified- Azure Administrator Associate.pdf",
-    description: "Skills in implementing, managing, and monitoring an organization's Microsoft Azure environment.",
-    skills: ["Azure Administration", "Virtual Networks", "Storage Management", "Azure AD"],
-    date: "2024"
-  },
-  {
-    code: "AZ-305",
-    name: "Designing Microsoft Azure Infrastructure Solutions",
-    issuer: "Microsoft",
-    icon: "SiMicrosoftazure",
-    badge: "/assets/certificates/badges/azure-solutions-architect-expert.png",
-    certificate: "/assets/certificates/docs/Microsoft Certified- Azure Solutions Architect Expert.pdf",
-    description: "Design cloud and hybrid solutions that run on Microsoft Azure, including compute, network, storage, monitoring, and security.",
-    skills: ["Solution Architecture", "Infrastructure Design", "Azure Services", "High Availability"],
-    date: "2024"
-  },
-  {
-    code: "AZ-400",
-    name: "Designing and Implementing Microsoft DevOps Solutions",
-    issuer: "Microsoft",
-    icon: "SiMicrosoftazure",
-    badge: "/assets/certificates/badges/DevOps-Engineer.png",
-    certificate: "/assets/certificates/docs/Microsoft Certified- DevOps Engineer Expert.pdf",
-    description: "Expertise in combining people, process, and technologies to continuously deliver valuable products and services.",
-    skills: ["CI/CD", "Azure DevOps", "Infrastructure as Code", "Monitoring"],
-    date: "2024"
-  },
-  {
-    code: "MCT",
-    name: "Microsoft Certified Trainer",
-    issuer: "Microsoft",
-    icon: "SiMicrosoftazure",
-    badge: "/assets/certificates/badges/microsoft-certified-trainer.png",
-    certificate: "",
-    description: "Qualified to deliver Microsoft official curriculum training to technical and professional audiences.",
-    skills: ["Technical Training", "Knowledge Transfer", "Presentation", "Mentoring"],
-    date: "2025"
-  }
-];
 
 export const projects = [
   {
@@ -253,6 +198,125 @@ export const projects = [
       "Performance optimization with memoization and lazy loading"
     ],
     category: "enterprise"
+  },
+  {
+    id: 8,
+    title: "Internal RAG Knowledge Portal",
+    client: "Enterprise SaaS",
+    description: "Delivered a React and TypeScript portal where teams query internal policies and runbooks using retrieval-augmented generation. Integrated LangChain-style orchestration with OpenAI APIs, PostgreSQL for metadata, and Redis-backed session caches to keep answers fast and consistent under load.",
+    image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=800&h=500&fit=crop",
+    technologies: ["React", "TypeScript", "LangChain", "OpenAI API", "PostgreSQL", "Redis", "RAG & vector search"],
+    highlights: [
+      "Chunking, embedding, and vector retrieval pipeline with guardrails",
+      "Citation-backed answers with source snippets in the UI",
+      "Redis caching for repeated queries and conversation context",
+      "Role-scoped document collections and audit-friendly logging",
+      "Type-safe API contracts between UI and Node.js services",
+      "Azure DevOps release gates with smoke tests before production"
+    ],
+    category: "ai"
+  },
+  {
+    id: 9,
+    title: "NestJS GraphQL Service Layer",
+    client: "FinTech Platform",
+    description: "Built a NestJS and TypeScript backend exposing a federated GraphQL API over account, ledger, and notification domains. Used PostgreSQL with migrations, Redis for idempotency keys and rate limiting, and Jest for contract tests to keep schema changes safe across teams.",
+    image: "https://images.unsplash.com/photo-1639322537504-6427a16b0a28?w=800&h=500&fit=crop",
+    technologies: ["NestJS", "GraphQL", "TypeScript", "PostgreSQL", "Redis", "REST APIs", "Jest"],
+    highlights: [
+      "Modular domain services with clear DTO validation at the edge",
+      "DataLoader patterns to prevent N+1 query storms",
+      "Redis-backed idempotency for payment-adjacent mutations",
+      "Schema versioning and breaking-change detection in CI",
+      "Jest integration tests against a disposable Postgres fixture",
+      "Structured logging and health checks for Kubernetes probes"
+    ],
+    category: "fintech"
+  },
+  {
+    id: 10,
+    title: "Operations Metrics Cockpit",
+    client: "Global Logistics Partner",
+    description: "Implemented a Tailwind-styled React dashboard with AG Grid for fleet and SLA metrics, plus E-Charts for trend analysis. Connected to Node.js REST APIs with TypeScript clients, Redux for filter state, and optimistic updates backed by Redis-cached aggregates.",
+    image: "https://images.unsplash.com/photo-1551434678-e076c223a692?w=800&h=500&fit=crop",
+    technologies: ["React", "TypeScript", "Tailwind CSS", "AG Grid", "E-Charts", "Redux", "Node.js", "Redis"],
+    highlights: [
+      "Pinned column layouts and saved views per user role",
+      "Large-dataset virtualization with server-driven AG Grid models",
+      "E-Charts drill-downs synced with global date-range filters",
+      "Redux Toolkit slices for KPI selection and URL-deep-linking",
+      "Node.js aggregation workers with Redis hot metrics",
+      "Jest and React Testing Library coverage on critical widgets"
+    ],
+    category: "enterprise"
+  },
+  {
+    id: 11,
+    title: "Merchant Onboarding API",
+    client: "E-Commerce Marketplace",
+    description: "Shipped an Express and TypeScript service suite for seller onboarding, KYC document intake, and catalog bootstrap. PostgreSQL stores normalized merchant profiles, Redis queues webhook retries, and REST APIs power a React admin console with JWT-based access.",
+    image: "https://images.unsplash.com/photo-1556740758-90de374c12ad?w=800&h=500&fit=crop",
+    technologies: ["Express", "TypeScript", "PostgreSQL", "Redis", "REST APIs", "React", "JavaScript"],
+    highlights: [
+      "Idempotent REST handlers with structured error envelopes",
+      "Background workers for document virus scan and OCR callbacks",
+      "Redis streams for reliable webhook delivery and replay",
+      "React admin flows with step validation and progress persistence",
+      "Database indexes tuned for search-by-merchant-state reports",
+      "Azure DevOps multi-stage pipelines with blue/green deploy hooks"
+    ],
+    category: "ecommerce"
+  },
+  {
+    id: 12,
+    title: "Azure OpenAI Contract Review Copilot",
+    client: "Legal Tech Vendor",
+    description: "Created a secure React and TypeScript workspace that calls Azure OpenAI with retrieval over clause libraries. Combined LangChain tooling for prompt templates, RAG & vector search for similar precedents, and Agents & evals workflows so reviewers can compare model drafts side by side.",
+    image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&h=500&fit=crop",
+    technologies: ["React", "TypeScript", "Azure OpenAI", "LangChain", "RAG & vector search", "Agents & evals"],
+    highlights: [
+      "Tenant-isolated vector indexes with metadata filters",
+      "Human-in-the-loop accept/reject tracking for model outputs",
+      "Evaluation harness comparing prompts across document batches",
+      "Redacted logging paths for sensitive legal text",
+      "Streaming completions with cancel tokens in the UI",
+      "Azure DevOps secret rotation tied to managed identities"
+    ],
+    category: "ai"
+  },
+  {
+    id: 13,
+    title: "Design-to-Code Component Library",
+    client: "Product Studio",
+    description: "Partnered with design to translate Figma tokens into a Tailwind CSS theme and a React component library consumed by three squads. TypeScript props, interactive documentation, and Jest visual regression hooks kept releases predictable.",
+    image: "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800&h=500&fit=crop",
+    technologies: ["React", "TypeScript", "Tailwind CSS", "Figma", "Jest", "Redux"],
+    highlights: [
+      "Figma variable sync into Tailwind config and CSS custom properties",
+      "Accessible primitives with keyboard and screen-reader audits",
+      "Redux-compatible form adapters for shared wizard flows",
+      "Jest snapshot suites for layout regressions on core components",
+      "Semantic versioning and changelog automation in Azure DevOps",
+      "Migration guides for teams upgrading from legacy CSS modules"
+    ],
+    category: "enterprise"
+  },
+  {
+    id: 14,
+    title: "Multimodel Support Triage Bot",
+    client: "B2B Support SaaS",
+    description: "Built a support triage console in React and TypeScript that routes tickets through OpenAI API and Anthropic Claude with Hugging Face fallbacks for classification. Added Redis conversation memory, Agents & evals scorecards, and GraphQL reads for ticket timelines.",
+    image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&h=500&fit=crop",
+    technologies: ["React", "TypeScript", "OpenAI API", "Anthropic Claude", "Hugging Face", "Redis", "GraphQL", "Agents & evals"],
+    highlights: [
+      "Policy-based model routing with latency and cost budgets",
+      "Side-by-side eval runs stored for compliance review",
+      "Redis TTL caches for repeated classification signatures",
+      "GraphQL federation read models for agent audit trails",
+      "Feature flags to roll out new prompts without redeploys",
+      "Dashboards in E-Charts for deflection and escalation KPIs"
+    ],
+    category: "ai"
   }
 ];
 
@@ -262,7 +326,6 @@ export const navLinks = [
   { name: "Experience", to: "experience" },
   { name: "Skills", to: "skills" },
   { name: "Projects", to: "projects" },
-  { name: "Certifications", to: "certifications" },
   // { name: "Awards", to: "awards" },
   { name: "Contact", to: "contact" }
 ];

@@ -1,10 +1,10 @@
 import { motion, useInView } from 'framer-motion';
 import { useRef, useEffect, useState } from 'react';
-import { FaCode, FaServer, FaCloud, FaPassport, FaCheckCircle } from 'react-icons/fa';
+import { FaCode, FaServer, FaCheckCircle } from 'react-icons/fa';
 import { personalInfo } from '../data/portfolioData';
 import { useTheme } from '../context/ThemeContext';
-import profileImageDark from '../assets/Yash_Black_and_White.png';
-import profileImageLight from '../assets/Yash_Color.png';
+import profileImageDark from '../assets/Guy Stark-dark.png';
+import profileImageLight from '../assets/Guy Stark.png';
 import './About.css';
 
 // Animated Counter Component
@@ -36,7 +36,7 @@ const AnimatedCounter = ({ value, duration = 2 }) => {
   }, [isInView, value, duration]);
 
   const suffix = value.replace(/[0-9]/g, '');
-  
+
   return (
     <span ref={ref}>
       {displayValue}{suffix}
@@ -73,7 +73,7 @@ const About = ({ onHover, onLeave }) => {
 
   const stats = [
     { value: '5+', label: 'Years Experience', icon: FaCode },
-    { value: '6', label: 'Certifications', icon: FaCloud },
+    { value: '10+', label: 'Core Technologies', icon: FaCheckCircle },
     { value: '25+', label: 'Projects Delivered', icon: FaServer },
   ];
 
@@ -88,7 +88,7 @@ const About = ({ onHover, onLeave }) => {
         >
           <h2 className="section-title">About Me</h2>
           <p className="section-subtitle">
-            A passionate Full Stack Developer with a love for creating exceptional digital experiences
+            A passionate Full Stack & AI Developer with a love for creating exceptional digital experiences
           </p>
         </motion.div>
 
@@ -100,8 +100,8 @@ const About = ({ onHover, onLeave }) => {
         >
           <motion.div className="about-image" variants={itemVariants}>
             <div className="image-wrapper">
-              <img 
-                src={isDark ? profileImageDark : profileImageLight} 
+              <img
+                src={isDark ? profileImageDark : profileImageLight}
                 alt={personalInfo.name}
                 className="profile-image"
               />
@@ -126,29 +126,10 @@ const About = ({ onHover, onLeave }) => {
               ))}
             </motion.div>
 
-            {/* Work Authorization */}
-            <motion.div className="work-auth" variants={itemVariants}>
-              <div className="work-auth-header">
-                <FaPassport className="work-auth-icon" />
-                <span className="work-auth-title">Work Authorization</span>
-                <span className="work-auth-badge">
-                  <FaCheckCircle /> {personalInfo.workAuthorization.status}
-                </span>
-              </div>
-              <div className="work-auth-grid">
-                {personalInfo.workAuthorization.details.map((item, index) => (
-                  <div key={index} className="work-auth-item">
-                    <span className="work-auth-label">{item.label}</span>
-                    <span className="work-auth-value">{item.value}</span>
-                  </div>
-                ))}
-              </div>
-            </motion.div>
-
             {/* <motion.div className="about-cta" variants={itemVariants}>
               <LightingButton
                 href={resumeFile}
-                download="Yash_Jain_Frontend_Developer.pptx"
+                download="Guy_Stark_Frontend_Developer.pptx"
                 className="nav-btn"
                 onMouseEnter={onHover}
                 onMouseLeave={onLeave}

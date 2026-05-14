@@ -1,7 +1,7 @@
 import { useState, useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { 
-  FaEnvelope, FaMapMarkerAlt, FaGithub, FaLinkedin, 
+  FaEnvelope, FaTelegramPlane, FaGithub, FaLinkedin, 
   FaTwitter, FaPaperPlane, FaCheck 
 } from 'react-icons/fa';
 import { personalInfo } from '../data/portfolioData';
@@ -50,10 +50,10 @@ const Contact = ({ onHover, onLeave }) => {
       link: `mailto:${personalInfo.email}`,
     },
     {
-      icon: FaMapMarkerAlt,
-      label: 'Location',
-      value: personalInfo.location,
-      link: null,
+      icon: FaTelegramPlane,
+      label: 'Telegram',
+      value: personalInfo.telegram,
+      link: personalInfo.social.telegram,
     },
   ];
 
@@ -61,6 +61,7 @@ const Contact = ({ onHover, onLeave }) => {
     { icon: FaGithub, link: personalInfo.social.github, label: 'GitHub' },
     { icon: FaLinkedin, link: personalInfo.social.linkedin, label: 'LinkedIn' },
     { icon: FaTwitter, link: personalInfo.social.twitter, label: 'Twitter' },
+    { icon: FaTelegramPlane, link: personalInfo.social.telegram, label: 'Telegram' },
   ];
 
   return (
@@ -109,7 +110,13 @@ const Contact = ({ onHover, onLeave }) => {
                   <div className="card-content">
                     <span className="card-label">{info.label}</span>
                     {info.link ? (
-                      <a href={info.link} className="card-value">
+                      <a
+                        href={info.link}
+                        className="card-value"
+                        {...(info.link.startsWith('http')
+                          ? { target: '_blank', rel: 'noopener noreferrer' }
+                          : {})}
+                      >
                         {info.value}
                       </a>
                     ) : (

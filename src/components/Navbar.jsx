@@ -60,7 +60,7 @@ const Navbar = ({ onHover, onLeave }) => {
             onMouseLeave={onLeave}
           >
             <motion.span className="logo-text" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-              {personalInfo.name.split(' ').map(n => n[0]).join('')}
+              GUY
             </motion.span>
           </Link>
         ) : (
@@ -71,7 +71,7 @@ const Navbar = ({ onHover, onLeave }) => {
             onMouseLeave={onLeave}
             style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 0 }}
           >
-            <motion.span className="logo-text" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+            <motion.span className="" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               {personalInfo.name.split(' ').map(n => n[0]).join('')}
             </motion.span>
           </button>
@@ -124,15 +124,15 @@ const Navbar = ({ onHover, onLeave }) => {
 
         {/* Resume Button */}
         <div className="nav-actions">
-          <ThemeToggle 
-            theme={theme} 
+          <ThemeToggle
+            theme={theme}
             toggleTheme={toggleTheme}
             onHover={onHover}
             onLeave={onLeave}
           />
           {/* <LightingButton
             href={resumeFile}
-            download="Yash_Jain_Frontend_Developer.pptx"
+            download="Guy_Stark_Frontend_Developer.pptx"
             className="nav-btn"
             onMouseEnter={onHover}
             onMouseLeave={onLeave}
