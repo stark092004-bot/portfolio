@@ -10,7 +10,7 @@ A modern, responsive full-stack developer portfolio built with **React + Vite**,
 | Styling   | CSS Variables (dark/light theme)            |
 | Icons     | React Icons                                |
 | Server    | Node.js 22 + Express 4                     |
-| Deploy    | Azure App Service (Central India)          |
+| Deploy    | Azure App Service (Central China)          |
 
 ## Project Structure
 
