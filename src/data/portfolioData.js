@@ -31,7 +31,7 @@ export const personalInfo = {
     "Strong understanding of software design principles, component abstraction patterns, and scalable frontend architecture.",
   ],
   email: "stark092004@gmail.com",
-  telegram: "stark092004",
+  telegram: "k02_xx",
   social: {
     github: "https://github.com/stark092004-bot",
     linkedin: "https://www.linkedin.com/in/guystark",

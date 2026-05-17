@@ -1,7 +1,7 @@
 import { useState, useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
-import { 
-  FaEnvelope, FaTelegramPlane, FaPaperPlane, FaCheck 
+import {
+  FaEnvelope, FaTelegramPlane, FaPaperPlane, FaCheck
 } from 'react-icons/fa';
 import { personalInfo } from '../data/portfolioData';
 import LightingButton from './LightingButton';
@@ -16,7 +16,7 @@ const Contact = ({ onHover, onLeave }) => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
-  
+
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
@@ -30,14 +30,14 @@ const Contact = ({ onHover, onLeave }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     // Simulate form submission
     await new Promise((resolve) => setTimeout(resolve, 1500));
-    
+
     setIsSubmitting(false);
     setIsSubmitted(true);
     setFormData({ name: '', email: '', subject: '', message: '' });
-    
+
     setTimeout(() => setIsSubmitted(false), 3000);
   };
 
@@ -123,7 +123,7 @@ const Contact = ({ onHover, onLeave }) => {
               ))}
             </div>
 
-            <div className="social-section">
+            {/* <div className="social-section">
               <h4>Follow Me</h4>
               <div className="social-links">
                 {socialLinks.map((social, index) => (
@@ -146,7 +146,7 @@ const Contact = ({ onHover, onLeave }) => {
                   </motion.a>
                 ))}
               </div>
-            </div>
+            </div> */}
           </motion.div>
 
           {/* Contact Form */}
