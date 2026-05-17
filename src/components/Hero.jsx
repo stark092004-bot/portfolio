@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion';
 import { TypeAnimation } from 'react-type-animation';
-import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
 import { personalInfo } from '../data/portfolioData';
 import './Hero.css';
 
@@ -27,18 +26,6 @@ const Hero = ({ onHover, onLeave }) => {
         ease: 'easeOut',
       },
     },
-  };
-
-  const socialVariants = {
-    hidden: { opacity: 0, x: -20 },
-    visible: (i) => ({
-      opacity: 1,
-      x: 0,
-      transition: {
-        delay: 1 + i * 0.1,
-        duration: 0.4,
-      },
-    }),
   };
 
   return (
@@ -121,33 +108,6 @@ const Hero = ({ onHover, onLeave }) => {
               </span>
             ))}
           </motion.p>
-          {/* Social Links */}
-          <div className="hero-social">
-            {[
-              { icon: FaGithub, link: personalInfo.social.github, label: 'GitHub' },
-              { icon: FaLinkedin, link: personalInfo.social.linkedin, label: 'LinkedIn' },
-              { icon: FaTwitter, link: personalInfo.social.twitter, label: 'Twitter' },
-            ].map((social, i) => (
-              <motion.a
-                key={social.label}
-                href={social.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="social-link"
-                custom={i}
-                variants={socialVariants}
-                initial="hidden"
-                animate="visible"
-                whileHover={{ scale: 1.2, y: -4 }}
-                whileTap={{ scale: 0.9 }}
-                onMouseEnter={onHover}
-                onMouseLeave={onLeave}
-                aria-label={social.label}
-              >
-                <social.icon size={22} />
-              </motion.a>
-            ))}
-          </div>
         </div>
 
         {/* Decorative Elements */}

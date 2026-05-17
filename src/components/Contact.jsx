@@ -1,8 +1,7 @@
 import { useState, useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { 
-  FaEnvelope, FaTelegramPlane, FaGithub, FaLinkedin, 
-  FaTwitter, FaPaperPlane, FaCheck 
+  FaEnvelope, FaTelegramPlane, FaPaperPlane, FaCheck 
 } from 'react-icons/fa';
 import { personalInfo } from '../data/portfolioData';
 import LightingButton from './LightingButton';
@@ -58,9 +57,6 @@ const Contact = ({ onHover, onLeave }) => {
   ];
 
   const socialLinks = [
-    { icon: FaGithub, link: personalInfo.social.github, label: 'GitHub' },
-    { icon: FaLinkedin, link: personalInfo.social.linkedin, label: 'LinkedIn' },
-    { icon: FaTwitter, link: personalInfo.social.twitter, label: 'Twitter' },
     { icon: FaTelegramPlane, link: personalInfo.social.telegram, label: 'Telegram' },
   ];
 
