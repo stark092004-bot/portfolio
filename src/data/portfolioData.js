@@ -36,7 +36,7 @@ export const personalInfo = {
     github: "https://github.com/stark092004-bot",
     linkedin: "https://www.linkedin.com/in/guystark",
     twitter: "https://twitter.com/guystark",
-    telegram: "https://t.me/stark092004"
+    telegram: "https://t.me/k02_xx"
   }
 };
 
