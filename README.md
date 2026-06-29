@@ -49,4 +49,4 @@ zip -r deploy.zip dist/ server.js package.json package-lock.json web.config
 az webapp deploy --resource-group Guy-Stark-RG --name guy-stark --src-path deploy.zip --type zip
 ```
 
-Live: **https://guy-stark.azurewebsites.net** (update with your App Service URL)
+Live: **https://guy-stark-portfolio.vercel.app** (update with your App Service URL)
